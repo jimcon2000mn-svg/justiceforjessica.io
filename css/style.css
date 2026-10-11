@@ -1,0 +1,68 @@
+/* Jessica's Website — Pink / Dark Green Theme */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Georgia, "Times New Roman", serif; line-height: 1.7; color: #333; background: #faf7f8; }
+a { color: #b13f6c; }
+a:hover { color: #8f2f56; }
+.container { max-width: 1300px; margin: auto; padding: 0 25px; }
+header { background: #d85b8a; color: #1f4d3a; text-align: center; padding: 55px 20px; }
+header h1 { margin: 0; font-size: 46px; font-weight: normal; }
+header p { margin: 10px 0 0; font-size: 20px; }
+nav { background: #a83f68; }
+nav .container { display: flex; justify-content: center; flex-wrap: wrap; }
+nav a { color: #1f4d3a; text-decoration: none; padding: 15px 25px; font-family: Arial, sans-serif; }
+nav a:hover { background: #c94f7d; color: #1f4d3a; }
+main { padding: 45px 0; }
+.content-box { background: white; padding: 40px; margin-bottom: 30px; border-top: 4px solid #d85b8a; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+h2 { color: #b13f6c; font-size: 30px; margin-top: 0; }
+h3 { color: #a83f68; }
+.hero { text-align: center; background: white; padding: 40px 30px; margin-bottom: 30px; border-top: 6px solid #d85b8a; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+.hero h2 { color: #a83f68; font-size: 34px; }
+.jessica-photo { display: block; max-width: 500px; width: 100%; height: auto; margin: 0 auto 30px; border-radius: 6px; border: 5px solid #f0c2d2; }
+/* Homepage: centered main photograph with a row of three photos below. */
+.hero.hero-centered-gallery { display: block; }
+.hero-main-content { max-width: 720px; margin: 0 auto; text-align: center; }
+.hero-main-content .jessica-photo { max-width: 500px; width: 100%; height: auto; }
+.homepage-photo-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 36px; align-items: center; }
+.homepage-photo-row .side-gallery-photo { display: block; width: 100%; height: 260px; object-fit: contain; border-radius: 10px; border: 5px solid #f0c2d2; background: #faf7f8; }
+/* Story page */
+.story-intro { display: flex; align-items: center; gap: 40px; }
+.story-photo-container { flex: 0 0 40%; }
+.story-photo { display: block; width: 100%; max-width: 281px; height: auto; margin: 0 auto; border-radius: 6px; border: 5px solid #f0c2d2; }
+.story-text { flex: 1; }
+.story-text h2 { margin-top: 0; }
+/* Buttons, help page and links */
+.button { display: inline-block; background: #b13f6c; color: #1f4d3a; padding: 14px 28px; text-decoration: none; border-radius: 5px; font-family: Arial, sans-serif; margin-top: 15px; transition: background .2s ease; }
+.button:hover { background: #8f2f56; color: #1f4d3a; }
+.help-box { text-align: center; }
+.coming-soon { display: inline-block; padding: 12px 25px; border: 2px solid #d85b8a; color: #a83f68; font-family: Arial, sans-serif; margin-top: 15px; border-radius: 5px; }
+.content-box a:not(.button) { color: #b13f6c; font-weight: bold; }
+.content-box a:not(.button):hover { color: #8f2f56; }
+footer { background: #8f2f56; color: #1f4d3a; text-align: center; padding: 30px; font-family: Arial, sans-serif; }
+footer a { color: #1f4d3a; }
+footer a:hover { color: white; }
+/* Smaller screens: the photo row wraps without distorting images. */
+@media (max-width: 750px) {
+    .homepage-photo-row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .homepage-photo-row .side-gallery-photo { height: 220px; }
+}
+@media (max-width: 480px) {
+    .homepage-photo-row { grid-template-columns: 1fr; }
+    .homepage-photo-row .side-gallery-photo { height: auto; max-height: 350px; }
+}
+@media (max-width: 700px) {
+    header h1 { font-size: 34px; }
+    header p { font-size: 17px; }
+    nav .container { flex-direction: column; text-align: center; }
+    nav a { border-bottom: 1px solid #c94f7d; }
+    .content-box, .hero { padding: 25px; }
+    .hero h2 { font-size: 28px; }
+    .story-intro { flex-direction: column; text-align: center; gap: 20px; }
+    .story-photo-container { flex: none; width: 100%; }
+    .story-photo { margin: 0 auto 20px; }
+    .story-text { width: 100%; }
+}
+
+/* Additional photos on Jessica's Story page */
+.story-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; align-items: start; }
+.story-gallery img { display: block; width: 100%; height: auto; border: 5px solid #f0c2d2; border-radius: 8px; }
+@media (max-width: 600px) { .story-gallery { grid-template-columns: 1fr; } }
